@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require jquery_nested_form
+//= require fotorama
 //= require_tree .
