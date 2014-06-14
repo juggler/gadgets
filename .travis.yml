@@ -2,5 +2,4 @@ language: ruby
 rvm:
   - "2.1"
 before_script:
-  - cp config/database.yml.example config/database.yml
   - bin/rake db:create db:migrate RAILS_ENV=test
