@@ -39,7 +39,7 @@ feature 'Gadgets' do
   scenario 'Editing and existing gadget' do
     visit gadget_path(gadget_1)
 
-    expect(page).to have_text('WD 500')
+    expect(page).to have_text('Wd 500')
 
     click_link 'Edit'
 
