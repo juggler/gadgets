@@ -4,8 +4,8 @@ feature 'Gadgets' do
   let(:user) { create(:user, email: 'nick@example.com') }
   let(:another_user) { create(:user, email: 'leo@example.com') }
 
-  let(:gadget_1) { create(:gadget, name: 'WD 500', user: user) }
-  let(:gadget_2) { create(:gadget, name: 'Not mine', user: another_user) }
+  let!(:gadget_1) { create(:gadget, name: 'WD 500', user: user) }
+  let!(:gadget_2) { create(:gadget, name: 'Not mine', user: another_user) }
 
   background do
     sign_in user
