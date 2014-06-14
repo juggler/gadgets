@@ -1,6 +1,8 @@
 - gadgets.each do |gadget|
   .gadget
     hr
-    = thumb_picture_for gadget
-    p = gadget.name
-    = link_to 'Remove', gadget, method: 'delete'
+    = list_picture_for gadget
+    p
+      = link_to gadget.name, gadget
+    p
+      = link_to 'Remove', gadget, method: 'delete'

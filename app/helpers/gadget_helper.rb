@@ -1,6 +1,10 @@
 module GadgetHelper
-  def thumb_picture_for(gadget)
-    image_tag gadget.pictures.first.image.thumb if gadget.pictures.any?
+  def list_picture_for(gadget)
+    image_tag gadget.pictures.first.image.small if gadget.pictures.any?
+  end
+
+  def thumb_picture_url_for(gadget)
+    gadget.pictures.first.image.thumb if gadget.pictures.any?
   end
 
   def cover_picture_url_for(gadget)
@@ -15,7 +19,6 @@ module GadgetHelper
 
   def link_to_mode(mode)
     link_to mode.humanize, gadgets_path(mode: mode),
-      :class => classes_for_modes(mode, params[:mode]),
-      :'data-no-turbolink' => true
+      :class => classes_for_modes(mode, params[:mode])
   end
 end

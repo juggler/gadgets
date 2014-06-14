@@ -1,4 +1,4 @@
 .fotorama data-nav="thumbs"
   - gadgets.each do |gadget|
-    a href="#{cover_picture_url_for gadget}"
-      = thumb_picture_for(gadget)
+    div data-thumb="#{thumb_picture_url_for(gadget)}" data-img="#{cover_picture_url_for gadget}"
+      = link_to gadget.name, gadget
