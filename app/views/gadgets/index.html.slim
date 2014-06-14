@@ -1,10 +1,15 @@
 h1 Gadgets
 
+= render 'search'
+
 = link_to 'Add', new_gadget_path, class: 'btn btn-primary'
 
-- @gadgets.each do |gadget|
-  .gadget
-    hr
-    = cover_picture_for gadget
-    p = gadget.name
-    = link_to 'Remove', gadget, method: 'delete'
+- if @gadgets.any?
+  - @gadgets.each do |gadget|
+    .gadget
+      hr
+      = cover_picture_for gadget
+      p = gadget.name
+      = link_to 'Remove', gadget, method: 'delete'
+- else
+  p Nothing found
