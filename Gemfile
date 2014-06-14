@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.1'
 gem 'sqlite3'
 
+gem 'devise'
+
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -22,4 +24,6 @@ end
 group :test do
   gem 'minitest'
   gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
 end
