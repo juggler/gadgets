@@ -3,5 +3,8 @@ h1 Gadgets
 = link_to 'Add', new_gadget_path, class: 'btn btn-primary'
 
 - @gadgets.each do |gadget|
-  p = gadget.name
-  = link_to 'Remove', gadget, method: 'delete'
+  .gadget
+    hr
+    = cover_picture_for gadget
+    p = gadget.name
+    = link_to 'Remove', gadget, method: 'delete'

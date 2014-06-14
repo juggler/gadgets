@@ -4,6 +4,8 @@ gem 'rails', '4.1.1'
 gem 'sqlite3'
 
 gem 'devise'
+
+gem 'nested_form'
 gem 'simple_form', '= 3.1.0.rc1'
 
 gem 'carrierwave'
