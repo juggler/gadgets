@@ -2,6 +2,7 @@ class GadgetsController < ApplicationController
   before_action :find_gadget, only: [:show, :edit, :update, :destroy]
 
   def index
+    params[:mode] ||= 'cover_flow'
     @gadgets = GadgetSearch.new(current_user).perform(params[:name])
   end
 

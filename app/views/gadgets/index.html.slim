@@ -3,13 +3,17 @@ h1 Gadgets
 = render 'search'
 
 = link_to 'Add', new_gadget_path, class: 'btn btn-primary'
+hr
+
+.btn-group
+  = link_to_mode 'list'
+  = link_to_mode 'cover_flow'
+hr
 
 - if @gadgets.any?
-  - @gadgets.each do |gadget|
-    .gadget
-      hr
-      = cover_picture_for gadget
-      p = gadget.name
-      = link_to 'Remove', gadget, method: 'delete'
+  - if params[:mode] == 'list'
+    = render 'list_mode', gadgets: @gadgets
+  - elsif params[:mode] == 'cover_flow'
+    = render 'cover_flow_mode', gadgets: @gadgets
 - else
   p Nothing found

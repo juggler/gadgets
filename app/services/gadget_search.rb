@@ -4,6 +4,6 @@ class GadgetSearch
   end
 
   def perform(name)
-    @user.gadgets.where('name LIKE ?', "%#{name}%")
+    @user.gadgets.includes(:pictures).where('name LIKE ?', "%#{name}%")
   end
 end
