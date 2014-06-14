@@ -2,7 +2,7 @@ class GadgetsController < ApplicationController
   before_action :find_gadget, only: [:show, :edit, :update, :destroy]
 
   def index
-    @gadgets = current_user.gadgets
+    @gadgets = GadgetSearch.new(current_user).perform(params[:name])
   end
 
   def new
