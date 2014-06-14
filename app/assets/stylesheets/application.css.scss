@@ -16,3 +16,10 @@
 
 @import "bootstrap";
 @import 'fotorama';
+
+.fotorama__html a {
+  font-size: 50px;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+}

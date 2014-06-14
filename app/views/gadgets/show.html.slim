@@ -1,5 +1,9 @@
-h1 Gadget
+h1 = @gadget.name.capitalize
 
 = link_to 'Edit', edit_gadget_path(@gadget), class: 'btn btn-success'
+hr
 
-p = @gadget.name
+.fotorama data-nav="thumbs"
+  - @gadget.pictures.each do |picture|
+    a href="#{picture.image}"
+      = image_tag picture.image.thumb
