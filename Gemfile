@@ -25,4 +25,5 @@ group :test do
   gem 'minitest'
   gem 'capybara'
   gem 'shoulda-matchers'
+  gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
 end
