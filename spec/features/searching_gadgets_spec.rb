@@ -13,7 +13,7 @@ feature 'Searching gadgets' do
     sign_in user
   end
 
-  scenario 'Search gadgets' do
+  scenario 'Search existing gadgets' do
     visit '/'
 
     fill_in 'name', with: '00'
@@ -24,5 +24,16 @@ feature 'Searching gadgets' do
 
     expect(page).not_to have_text 'Not mine'
     expect(page).not_to have_text 'Another one'
+  end
+
+  scenario 'Search unavailable gadgets' do
+    visit '/'
+
+    fill_in 'name', with: 'Not mine'
+    click_on 'Search'
+
+    expect(page).to have_text 'Nothing found'
+
+    expect(page).not_to have_text 'Not mine'
   end
 end
