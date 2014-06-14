@@ -1,0 +1,6 @@
+.row
+  .col-md-5
+    = form_tag gadgets_path, method: 'get'  do
+      = text_field_tag :name, params[:name], class: 'form-control'
+      br
+      = submit_tag 'Search', class: 'btn btn-success'
