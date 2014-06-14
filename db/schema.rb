@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140614111432) do
+ActiveRecord::Schema.define(version: 20140614112621) do
+
+  create_table "gadgets", force: true do |t|
+    t.string   "name",       default: "", null: false
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.datetime "created_at"

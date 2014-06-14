@@ -7,10 +7,12 @@ feature "Gadgets" do
 
     create(:gadget, name: 'Inspector Gadget', user: user)
     create(:gadget, name: 'Not mine', user: another_user)
+
+    sign_in user
   end
 
   scenario "List of gadgets" do
-    visit "/"
+    visit '/'
 
     expect(page).to have_text('Inspector Gadget')
     expect(page).not_to have_text('Not mine')
