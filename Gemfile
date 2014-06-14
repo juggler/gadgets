@@ -6,6 +6,9 @@ gem 'sqlite3'
 gem 'devise'
 gem 'simple_form', '= 3.1.0.rc1'
 
+gem 'carrierwave'
+gem 'mini_magick'
+
 gem 'slim-rails'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.1.1'
