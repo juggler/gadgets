@@ -3,6 +3,11 @@ h1 Gadgets
 = render 'search'
 
 = link_to 'Add', new_gadget_path, class: 'btn btn-primary'
+hr
+
+.btn-group
+  = link_to_mode 'list'
+  = link_to_mode 'cover_flow'
 
 - if @gadgets.any?
   - @gadgets.each do |gadget|
